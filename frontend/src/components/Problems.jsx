@@ -52,15 +52,17 @@ function Problems() {
       {problems.length > 0 ? (
         problems.map((problem) => (
           <ProblemCard 
-            key={problem._id} 
-            title={problem.title} 
-            url={problem.url} 
-            time={problem.time} 
-            topic={problem.topic} 
-            id={problem._id}
-            expectedTime={problem.estimatedTime}
-            difficulty={problem.predictedDifficulty}
-          />
+  key={problem._id} 
+  title={problem.title} 
+  url={problem.url} 
+  time={problem.time} 
+  topic={problem.topic} 
+  notes={problem.notes}            
+  id={problem._id}
+  expectedTime={problem.estimatedTime}
+  difficulty={problem.predictedDifficulty}
+/>
+
         ))
       ) : (
         <p className="text-gray-400">No problems available</p>
